@@ -1,0 +1,25 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:latest
+    ports:
+      - 3307:3307
+    environment:
+      - MYSQL_ROOT_PASSWORD=
+  web:
+    image: goapi-image:latest
+    ports:
+      - 8081:8081
+#    volumes:
+#      - .:/app
+#    depends_on:
+#      - db
+#  db:
+#    image: mysql:5.7
+#    environment:
+#      - MYSQL_ROOT_PASSWORD=
+#      - MYSQL_DATABASE=bootcamp_crud
+#    volumes:
+#      - db-data:/var/lib/mysql
+#volumes:
+#  db-data:
